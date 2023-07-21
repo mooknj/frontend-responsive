@@ -1,95 +1,71 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import React from "react"
+import BoxSection from "./components/BoxSection"
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div>
+      <BoxSection
+        title="ATHLETS"
+        image={{
+          desktop: "/images/footballer/desktop.png",
+          tablet: "/images/footballer/tablet.png",
+          mobile: "/images/footballer/mobile.png",
+        }}
+        contents={[
+          {
+            number: "01",
+            title: "CONNECTION",
+            text: "Connect with coaches directly, you can ping coaches to view profile.",
+            bgColor: "white",
+          },
+          {
+            number: "02",
+            title: "COLLABORATION",
+            text: "Work with other student athletes to  increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.",
+            bgColor: "grey",
+          },
+          {
+            number: "03",
+            title: "GROWTH",
+            text: "Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc ",
+            onDarkBg: true,
+            bgColor: "purple",
+          },
+        ]}
+        contentPosition="right"
+      />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <BoxSection
+        title="PLAYERS"
+        image={{
+          desktop: "/images/basketball/desktop.png",
+          tablet: "/images/basketball/tablet.png",
+          mobile: "/images/basketball/mobile.png",
+        }}
+        contents={[
+          {
+            number: "01",
+            title: "CONNECTION",
+            text: "Connect with talented athlete directly, you can watch their skills through video showreels directly from Surface 1.",
+            bgColor: "white",
+          },
+          {
+            number: "02",
+            title: "COLLABORATION",
+            text: "Work with recruiter to increase your chances of finding talented athlete.",
+            bgColor: "grey",
+          },
+          {
+            number: "03",
+            numberColor: "purple",
+            title: "GROWTH",
+            text: "Save your time, recruit proper athlets for your team.",
+            onDarkBg: true,
+            bgColor: "darkBlue",
+          },
+        ]}
+        contentPosition="left"
+      />
+    </div>
   )
 }
